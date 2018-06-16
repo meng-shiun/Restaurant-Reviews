@@ -1,0 +1,142 @@
+@media screen and (min-width: 575px) {
+  nav {
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .filter-options {
+    justify-content: center;
+  }
+
+  .filter-options h2 {
+    font-size: 1.2em;
+    margin-right: 1em;
+  }
+
+  .filter-options select {
+    width: 250px;
+    padding: 0 1em;
+  }
+
+  #restaurants-list {
+    margin: 0 calc(3% - 8px);
+  }
+
+  #restaurants-list li {
+    width: calc(50% - 30px);
+  }
+
+  .inside #restaurant-container {
+    width: 50%;
+  }
+
+  .inside #reviews-container {
+    padding: 1.2em 1em 5em;
+    border-left: 1px solid #cac7c7;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+
+  nav {
+    position: fixed;
+    z-index: 10;
+  }
+
+  #breadcrumb {
+    position: fixed;
+    top: 46px; left: 0; right: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  #restaurants-list {
+    margin: 0 calc(1.6% );
+  }
+
+  #restaurants-list li {
+    position: relative;
+    width: calc(33% - 30px);
+    min-height: 420px;
+  }
+
+  #restaurants-list li h1 {
+    font-size: 12pt;
+    font-weight: 600;
+  }
+
+  #restaurants-list li a {
+    position: absolute;
+    bottom: 4px;
+  }
+
+  #restaurants-list .restaurant-img {
+    min-height: 200px;
+  }
+
+  .inside #maincontent {
+    flex-direction: column;
+  }
+
+  .inside #map-container {
+    position: fixed;
+    right: 0; top: 0; bottom: 0;
+    width: 55%;
+    border-left: 1px solid #8c8a8a;
+  }
+
+  .inside #restaurant-container {
+  	width: 45%;
+    margin-top: 8em;
+    border-top: 0;
+  }
+
+  .inside #reviews-container {
+    border-left: 0;
+    width: 45%;
+  }
+
+  .review-comments {
+  	font-size: 1.0em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  #restaurants-list {
+    margin: 0 calc(1%);
+  }
+
+  #restaurants-list li {
+    width: calc(25% - 30px);
+    min-height: 380px;
+  }
+
+  #restaurants-list li h1 {
+    font-size: 14pt;
+    font-weight: normal;
+  }
+
+  #restaurants-list li a {
+    position: relative;
+  }
+
+  #restaurants-list .restaurant-img {
+    min-height: 200px;
+  }
+
+  .inside #map-container {
+    width: 60%;
+  }
+
+  .inside #restaurant-container {
+    width: 40%;
+  }
+
+  .inside #reviews-container {
+    width: 40%;
+  }
+}
