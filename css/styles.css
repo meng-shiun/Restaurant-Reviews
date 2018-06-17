@@ -37,6 +37,20 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+.skip-results {
+	position: fixed;
+	top: -80px; left: 0; right: 0;
+	background-color: rgba(255, 255, 255, 0.95);
+	box-shadow: 0px 7px 11px -4px #6b6b6b;
+	color: #fff;
+	font-size: 1.4em;
+	padding: 1em;
+	z-index: 100;
+	text-align: center;
+}
+.skip-results:focus {
+	top: 0;
+}
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -119,10 +133,11 @@ nav h1 a {
 	justify-content: space-around;
 }
 .filter-options h2 {
-	display: flex;
+	width: 100%;
   color: #fff;
   font-weight: 100;
-	font-size: 20px;
+	font-size: 1.2em;
+	text-align: center;
 }
 .filter-options select {
   background-color: #fff;
@@ -137,6 +152,9 @@ nav h1 a {
 .filter-options > select:focus {
   background-color: #232425;
 	color: #fff;
+}
+#filter-results {
+	padding-top: 1em;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -186,7 +204,6 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  /* background-color: #ffa500; */
 	background-color: #fff;
 	border: 1px solid #d97921;
   color: #d97921;
