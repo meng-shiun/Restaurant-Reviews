@@ -22,7 +22,7 @@
   #restaurants-list {
     margin: 0 calc(3% - 8px);
   }
-
+  
   #restaurants-list li {
     width: calc(50% - 30px);
   }
@@ -93,7 +93,7 @@
   }
 
   .inside #restaurant-container {
-  	width: 45%;
+    width: 45%;
     margin-top: 8em;
     border-top: 0;
   }
@@ -104,7 +104,7 @@
   }
 
   .review-comments {
-  	font-size: 1.0em;
+    font-size: 1.0em;
   }
 }
 
