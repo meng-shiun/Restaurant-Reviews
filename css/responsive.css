@@ -1,3 +1,5 @@
+@import "styles.css";
+
 @media screen and (min-width: 575px) {
   nav {
     height: 48px;
@@ -22,7 +24,7 @@
   #restaurants-list {
     margin: 0 calc(3% - 8px);
   }
-  
+
   #restaurants-list li {
     width: calc(50% - 30px);
   }

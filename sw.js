@@ -1,4 +1,4 @@
-var staticCacheName = 'restaurant-static-v5';
+var staticCacheName = 'restaurant-static-v3';
 
 var defaultCacheFiles = [
   './',
@@ -10,7 +10,6 @@ var defaultCacheFiles = [
   './js/main.js',
   './js/restaurant_info.js',
   './css/styles.css'
-  // TODO: add google font
 ];
 
 var dynamicCacheName = 'dynamic-files';
