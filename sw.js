@@ -1,4 +1,4 @@
-var staticCacheName = 'restaurant-static-v0';
+var staticCacheName = 'restaurant-static-v9';
 
 var defaultCacheFiles = [
   './',
