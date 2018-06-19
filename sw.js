@@ -1,4 +1,4 @@
-var staticCacheName = 'restaurant-static-v3';
+var staticCacheName = 'restaurant-static-v0';
 
 var defaultCacheFiles = [
   './',
@@ -9,6 +9,7 @@ var defaultCacheFiles = [
   './js/dbhelper.js',
   './js/main.js',
   './js/restaurant_info.js',
+  './css/responsive.css',
   './css/styles.css'
 ];
 
@@ -45,7 +46,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
 
-  console.log('[Service Worker] Fetch', e.request.url);
+  // console.log('[Service Worker] Fetch', e.request.url);
 
   // If the page indicates 'No internet', show custom offline page
   if (e.request.mode == 'navigate') {
@@ -56,12 +57,17 @@ self.addEventListener('fetch', function(e) {
     );
   }
 
+  // Don't cache google map
+  if (e.request.url.indexOf('googleapis') > -1 || e.request.url.indexOf('maps') > -1) {
+    return;
+  }
+
   e.respondWith(
     caches.match(e.request).then(function(response) {
 
       // If the request is in the static cache
       if (response) {
-        console.log('[Service Worker Found in cache]', e.request.url);
+        // console.log('[Service Worker Found in cache]', e.request.url);
         return response;
       }
 
@@ -73,10 +79,11 @@ self.addEventListener('fetch', function(e) {
         var responseClone = response.clone();
 
         // Add responses to dynamic cache when the url is visited
-        // including google map API, images, etc...
         caches.open(dynamicCacheName).then(function(cache) {
           cache.put(e.request, responseClone);
+
           console.log('[Service Worker add to Dynamic Cache]', e.request.url);
+
           return response;
         })
 
